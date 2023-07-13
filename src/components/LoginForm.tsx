@@ -25,7 +25,7 @@ export function LoginForm({ className, ...props }: UserAuthFormProps) {
   const { user, isLoading } = useAppSelector((state) => state.user);
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location?.state.from.pathname || '/';
+  const from = location?.state?.from?.pathname || '/';
   const {
     register,
     handleSubmit,
